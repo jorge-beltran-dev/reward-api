@@ -18,6 +18,7 @@ bin/phpunit
 ```
 
 ## Relevant files
+```bash
 src/Controller/EmployeesController.php
 src/DataSource/DataSourceInterface.php
 src/DataSource/EmployeeDataSource.php
@@ -30,3 +31,4 @@ templates/employees.html.twig
 tests/DataSource/EmployeeRestDataSourceTest.php
 tests/Model/EmployeeTest.php
 tests/Service/EmployeeServiceTest.php
+```
