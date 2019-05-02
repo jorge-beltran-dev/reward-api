@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employees</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://static.licdn.com/sc/h/br/4xkddmwxuto9ckmlf41jik6tg" rel="stylesheet"/>
+	<link href="{{ asset('css/employee.css') }}" rel="stylesheet"/>
+    </head>
+    <body>
+        <h1>Employees</h1>
+
+<div class="results container-with-shadow">
+    <ul class="search-results__list list-style-none ">
+          {% for employee in employees %}
+          <li class="search-result search-result__occluded-item ember-view">
+          <div class="search-entity search-result search-result--person search-result--occlusion-enabled ember-view"><div class="search-result__wrapper">
+  	  	<div class="search-result__image-wrapper">
+			<a data-control-id="adVcyDWyT8qCttJ9Gx17KQ==" data-control-name="search_srp_result" href="#" id="ember707" class="search-result__result-link ember-view">
+      				<figure class="search-result__image">
+          			<div id="ember708" class="ivm-image-view-model ember-view">  
+				<div id="ember709" class="display-flex ivm-view-attr__img-wrapper ivm-view-attr__img-wrapper--use-img-tag ember-view">
+				<div id="ember710" class="presence-entity presence-entity--size-4 ember-view">  
+					<img class="lazy-image ivm-view-attr__img--centered  EntityPhoto-circle-4 presence-entity__image EntityPhoto-circle-4 loaded" alt="{{ employee.getName }}" 
+						src="{{ employee.getAvatar }}">
+
+				</div>
+				</div>
+				</div>
+      				</figure>
+
+			</a>  
+		</div>
+	  	<div class="search-result__info pt3 pb4 ph0">
+			<a data-control-id="adVcyDWyT8qCttJ9Gx17KQ==" data-control-name="search_srp_result" href="#" id="ember712" class="search-result__result-link ember-view">      
+			<h3 id="ember713" class="actor-name-with-distance search-result__title single-line-truncate ember-view"><span class="name-and-icon">
+      				<span class="name actor-name">{{ employee.getName }}</span>
+    
+	    			</span>
+
+
+			</h3>
+			</a>
+	 	   	<p class="subline-level-1 t-14 t-black t-normal search-result__truncate">
+        			<span dir="ltr">{{ employee.getTitle }}</span>
+ 	   		</p>
+
+    			<p class="subline-level-2 t-12 t-black--light t-normal search-result__truncate">
+        			<span dir="ltr">{{ employee.getCompany }}</span>
+    			</p>
+    			<p class="subline-level-2 t-12 t-black--light t-normal search-result__truncate">
+        			<span dir="ltr">{{ employee.getBio }}</span>
+    			</p>
+
+		</div>
+		<hr/>
+      	</div>
+	</li>
+	{% endfor %}
+     </ul>
+</div>
+
+	</body>
+</html>
